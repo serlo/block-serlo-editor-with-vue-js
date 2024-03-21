@@ -84,11 +84,11 @@ To prevent this, go inside the vite.config.ts and add the web component as a cus
 
 ```TypeScript
 vue({
-    template: {
+  template: {
     compilerOptions: {
-    isCustomElement: (tag: string) => tag === 'react-wrapper'
+      isCustomElement: (tag: string) => tag === 'react-wrapper'
     }
-    }
+  }
 })
 ```
 
