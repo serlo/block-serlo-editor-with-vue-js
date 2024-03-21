@@ -16,7 +16,7 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^41.1.0",
     "@ckeditor/ckeditor5-vue": "^5.1.0",
-    "@serlo/editor": "^0.6.0-beta.10",
+    "@serlo/editor": "file:.yalc/@serlo/editor",
     "@vitejs/plugin-react": "^4.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

@@ -1,0 +1,66 @@
+{
+  "name": "@serlo/editor",
+  "version": "0.6.0-beta.12+1c881463",
+  "homepage": "https://de.serlo.org/editor",
+  "bugs": {
+    "url": "https://github.com/serlo/frontend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serlo/frontend.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Serlo Education e.V.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/editor.js"
+    },
+    "./dist/editor-tailwind.css": {
+      "import": "./dist/editor-tailwind.css",
+      "require": "./dist/editor-tailwind.css"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "module": "./dist/editor.js",
+  "types": "./dist/packages/editor/src/package/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "_eslint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "_prettier": "prettier .",
+    "build": "vite build",
+    "format": "npm-run-all --continue-on-error \"format:*\"",
+    "format:eslint": "yarn _eslint --fix",
+    "format:prettier": "yarn _prettier --write",
+    "lint": "npm-run-all lint:tsc lint:eslint lint:prettier",
+    "lint:eslint": "yarn _eslint",
+    "lint:prettier": "yarn _prettier --check",
+    "lint:tsc": "tsc --noEmit",
+    "yalc:publish": "yarn build && yalc publish --push --sig"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "packageManager": "yarn@3.6.1",
+  "engines": {
+    "node": "^18.0.0"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss/nesting": {},
+      "tailwindcss": {},
+      "postcss-flexbugs-fixes": {},
+      "autoprefixer": {}
+    }
+  },
+  "svgr": {
+    "svgo": false
+  },
+  "yalcSig": "1c881463c35d1b9a536c0855e582c8d0"
+}

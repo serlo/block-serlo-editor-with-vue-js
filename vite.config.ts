@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import react from '@vitejs/plugin-react'
 // @ts-ignore
-import veauryVitePlugins from 'veaury/vite/index.js'
+// import veauryVitePlugins from 'veaury/vite/index.js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,18 +13,29 @@ export default defineConfig({
     'process.env': loadEnv('', process.cwd())
   },
   plugins: [
-    veauryVitePlugins({
-      type: 'vue',
-      vueOptions: {
-        template: {
-          compilerOptions: {
-            isCustomElement: (tag: string) => tag === 'react-wrapper'
-          }
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag: string) => tag === 'react-wrapper'
         }
-      },
-      vueJsxOptions: {},
-      reactOptions: {}
-    })
+      }
+    }),
+    vueJsx(),
+    react()
+    // veauryVitePlugins({
+    //   type: 'custom',
+    //   vueJsxInclude: '',
+    //   reactInclude: '/[/\\]react_app[\\/][wW]+.[jt]sx$/',
+    //   vueOptions: {
+    //     template: {
+    //       compilerOptions: {
+    //         isCustomElement: (tag: string) => tag === 'react-wrapper'
+    //       }
+    //     }
+    //   },
+    //   vueJsxOptions: {},
+    //   reactOptions: {}
+    // })
   ],
   resolve: {
     alias: {

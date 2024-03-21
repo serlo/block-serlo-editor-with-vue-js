@@ -9,6 +9,10 @@ export const ReactTest = React.createElement(
   React.createElement(SimplestReactComponent, null, [])
 )
 
+// Note that the current version of React 18.2 has a lot of quirks with web
+// components https://custom-elements-everywhere.com. Hopefully, this will be
+// much easier to deal with in the future as React 19 (beta) seems to have great
+// support.
 class ReactWrapper extends HTMLElement {
   constructor() {
     super()
