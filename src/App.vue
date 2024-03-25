@@ -8,7 +8,8 @@ import WebComponentTest from './components/WebComponentTest.vue'
 <template>
   <header>
     <!-- id next is needed for react-modal, see https://github.com/serlo/frontend/blob/staging/apps/web/src/components/modal-with-close-button.tsx#L9 -->
-    <div class="wrapper" id="__next">
+    <div class="wrapper" id="">
+    <!-- <div class="wrapper" id="__next"> -->
       <!-- Hello world -->
       <!-- <CkEditor  />
       <div class="horizontal-break"/>
@@ -21,10 +22,6 @@ import WebComponentTest from './components/WebComponentTest.vue'
 </template>
 
 <style scoped>
-  .wrapper {
-    color: white;
-  }
-
   .horizontal-break{
     /* margin-top: 40px;
     margin-bottom: 40px; */

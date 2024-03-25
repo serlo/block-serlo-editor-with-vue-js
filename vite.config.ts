@@ -12,11 +12,15 @@ export default defineConfig({
   define: {
     'process.env': loadEnv('', process.cwd())
   },
+  server: {
+    port: 3000
+  },
   plugins: [
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: (tag: string) => tag === 'react-wrapper'
+          isCustomElement: (tag: string) =>
+            tag === 'react-wrapper' || tag === 'editor-web-component'
         }
       }
     }),

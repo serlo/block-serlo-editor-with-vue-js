@@ -1,6 +1,6 @@
 {
   "name": "@serlo/editor",
-  "version": "0.6.0-beta.12+1c881463",
+  "version": "0.6.0-beta.12+07f87d51",
   "homepage": "https://de.serlo.org/editor",
   "bugs": {
     "url": "https://github.com/serlo/frontend/issues"
@@ -15,14 +15,6 @@
   "exports": {
     ".": {
       "import": "./dist/editor.js"
-    },
-    "./dist/editor-tailwind.css": {
-      "import": "./dist/editor-tailwind.css",
-      "require": "./dist/editor-tailwind.css"
-    },
-    "./dist/style.css": {
-      "import": "./dist/style.css",
-      "require": "./dist/style.css"
     }
   },
   "module": "./dist/editor.js",
@@ -62,5 +54,5 @@
   "svgr": {
     "svgo": false
   },
-  "yalcSig": "1c881463c35d1b9a536c0855e582c8d0"
+  "yalcSig": "07f87d510c82c2574e4e15bb35455165"
 }

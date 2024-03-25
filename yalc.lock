@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "@serlo/editor": {
-      "signature": "1c881463c35d1b9a536c0855e582c8d0",
+      "signature": "07f87d510c82c2574e4e15bb35455165",
       "file": true
     }
   }

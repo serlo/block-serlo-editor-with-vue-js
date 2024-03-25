@@ -92,6 +92,14 @@ vue({
 })
 ```
 
+## How to solve cache issues in local development
+
+In the frontend package, trigger a complete rebuild:
+`yarn build && yarn yalc:publish`
+
+In this package, uninstall and reinstall dependencies with yalc:
+`yalc remove --all && npm i && yalc add @serlo/editor && npm i && npm run dev`
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).

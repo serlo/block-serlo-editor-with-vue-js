@@ -1,11 +1,12 @@
 <template>
     <p>Hi from Vue!</p>
     <react-wrapper></react-wrapper>
+    <editor-web-component></editor-web-component>
 </template>
 
 <script>
 import { defineComponent, onMounted } from 'vue';
-import { ReactWrapper } from '@serlo/editor'
+import { ReactWrapper, EditorWebComponent } from '@serlo/editor'
 
 export default defineComponent({
   name: 'WebComponentTest',
